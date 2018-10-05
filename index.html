@@ -299,58 +299,14 @@
 
       
         
-          
-            <p>本文介绍使用hexo在github搭建免费个人博客</p>
-<h1 id="使用hexo在github搭建免费个人博客教程"><a href="#使用hexo在github搭建免费个人博客教程" class="headerlink" title="使用hexo在github搭建免费个人博客教程"></a>使用hexo在github搭建免费个人博客教程</h1><h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1 准备工作"></a>1 准备工作</h2><ul>
-<li>有一个github账号，没有就注册一个</li>
-<li>电脑安装了node.js和npm包管理工具，并了解它们的基本用法</li>
-<li>安装了git客户端或其他的git工具</li>
-</ul>
-<h2 id="2-创建github仓库，用于存放博客"><a href="#2-创建github仓库，用于存放博客" class="headerlink" title="2 创建github仓库，用于存放博客"></a>2 创建github仓库，用于存放博客</h2><p>新建一个名为username.github.io的仓库，username就是你github的用户名，比如你的用户名是demo，你就新建demo.github.io的仓库，以后你的博客地址就是<a href="https://demo.github.io。注意以下几点：" target="_blank" rel="noopener">https://demo.github.io。注意以下几点：</a></p>
-<ul>
-<li>你的注册邮箱一定要验证</li>
-<li>username一定要是你的github用户名，也就是说一个github只能开一个博客</li>
-</ul>
-<h2 id="3-配置SSH-key"><a href="#3-配置SSH-key" class="headerlink" title="3 配置SSH key"></a>3 配置SSH key</h2><p>虽然使用用户名和密码也能访问GitHub权限，但不太安全，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
-<p>在Mac终端执行如下命令</p>
-<pre><code>$ cd ~/.ssh
-</code></pre><p>如果提示：No such file or directory 说明你是第一次使用ssh<br>继续执行如下命令</p>
-<pre><code>ssh-keygen -t rsa -C &quot;你注册GitHub的邮箱&quot;    
-</code></pre><p>连续3次回车，不需要输入密码，会在你的/Users/目录下生成一个.ssh文件夹（Mac查看隐藏文件夹使用shift+command+.）在.ssh文件夹中找到    .ssh\id_rsa.pub文件，用sublime text编辑器打开，复制里面的内容。打开你的GitHub主页，通过Settings -&gt; SSH and GPG keys -&gt; New SSH key。将刚才复制的内容粘贴到key那里，title随便填，保存。</p>
-<ul>
-<li>-t rsa表示使用类型为rsa的非对称加密方式传输</li>
-<li>-c 表示你生成公钥的描述，是你注册GitHub时要验证的邮箱，这个是必须的。不然会导致后期无法访问你的仓库</li>
-</ul>
-<p>测试是否配置成功</p>
-<pre><code>$ ssh -T git@github.com
-</code></pre><p>然后会看到Hi mushi007! You’ve successfully authenticated, but GitHub does not provide shell access.说明已经配置成功。</p>
-<h2 id="4-使用hexo写博客"><a href="#4-使用hexo写博客" class="headerlink" title="4 使用hexo写博客"></a>4 使用hexo写博客</h2><h3 id="4-1-关于hexo"><a href="#4-1-关于hexo" class="headerlink" title="4.1 关于hexo"></a>4.1 关于hexo</h3><p><a href="http://hexo.io" target="_blank" rel="noopener">官网</a>有详细介绍，这里不赘述</p>
-<h3 id="4-2-安装"><a href="#4-2-安装" class="headerlink" title="4.2 安装"></a>4.2 安装</h3><pre><code>$ npm install -g hexo
-</code></pre><h3 id="4-3-初始化"><a href="#4-3-初始化" class="headerlink" title="4.3 初始化"></a>4.3 初始化</h3><p>在电脑某个地方建一个文件夹，名字随便取，比如我的是blog，建在桌面</p>
-<pre><code>$ cd desktop/blog
-$ hexo init    
-</code></pre><p>hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图</p>
-<p><img src="" alt="此处有图">    </p>
-<p>hexo有2种_config.yml文件，一个是根目录下的全局的_config.yml，一个是各个theme下的</p>
-<pre><code>$ hexo g # 生成
-$ hexo s # 启动服务
-</code></pre><p>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的</p>
-<p><img src="" alt="此处有图"></p>
-<p>hexo s是开启本地预览服务，打开浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可看到内容，默认的主题比较丑</p>
-<p><img src="" alt="此处有图"></p>
-<h3 id="4-4-修改主题"><a href="#4-4-修改主题" class="headerlink" title="4.4 修改主题"></a>4.4 修改主题</h3><p>因为默认主题比较丑，我们就修改一下，个人喜欢的主题是Next，首先下载这个主题</p>
-<pre><code>$ cd desktop/blog
-$ git clone https://github.com/iissnan/hexo-theme-next themes/next
-</code></pre><p>下载的主题都在themes目录下，修改全局_config.yml中的theme: landscape改为theme: next，然后重新执行hexo g来重新生成。如果出现一些莫名其妙的问题，可以先执行hexo clean来清理一下public的内容，然后再来重新生成和发布。</p>
-<h3 id="4-5-上传到github"><a href="#4-5-上传到github" class="headerlink" title="4.5 上传到github"></a>4.5 上传到github</h3><p>配置全局_config.yml中有关deploy的部分：</p>
-<pre><code>deploy:
-    type: git
-    repository: git@github.com:mushi007/mushi007.github.io.git
-    branch: master
-</code></pre><p>  部署之前先安装一个插件</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre>
-          
+          <p>本文介绍使用hexo在github搭建免费个人博客</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/02/使用hexo+github搭建免费个人博客详细教程/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
