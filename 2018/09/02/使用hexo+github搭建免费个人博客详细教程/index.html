@@ -88,7 +88,7 @@
 <meta property="og:image" content="http://yoursite.com/images/20180902/structure.png">
 <meta property="og:image" content="http://yoursite.com/images/20180902/public.png">
 <meta property="og:image" content="http://yoursite.com/images/20180902/init.png">
-<meta property="og:updated_time" content="2018-10-05T12:25:59.458Z">
+<meta property="og:updated_time" content="2018-10-05T12:30:41.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github搭建免费个人博客教程">
 <meta name="twitter:description" content="本文介绍使用hexo在github搭建免费个人博客">
@@ -314,17 +314,17 @@
       
         <p>本文介绍使用hexo在github搭建免费个人博客</p>
 <a id="more"></a>
-<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1 准备工作"></a>1 准备工作</h2><ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
 <li>有一个github账号，没有就注册一个</li>
 <li>电脑安装了node.js和npm包管理工具，并了解它们的基本用法</li>
 <li>安装了git客户端或其他的git工具</li>
 </ul>
-<h2 id="2-创建github仓库，用于存放博客"><a href="#2-创建github仓库，用于存放博客" class="headerlink" title="2 创建github仓库，用于存放博客"></a>2 创建github仓库，用于存放博客</h2><p>新建一个名为username.github.io的仓库，username就是你github的用户名，比如你的用户名是demo，你就新建demo.github.io的仓库，以后你的博客地址就是<a href="https://demo.github.io。注意以下几点：" target="_blank" rel="noopener">https://demo.github.io。注意以下几点：</a></p>
+<h2 id="创建github仓库，用于存放博客"><a href="#创建github仓库，用于存放博客" class="headerlink" title="创建github仓库，用于存放博客"></a>创建github仓库，用于存放博客</h2><p>新建一个名为username.github.io的仓库，username就是你github的用户名，比如你的用户名是demo，你就新建demo.github.io的仓库，以后你的博客地址就是<a href="https://demo.github.io。注意以下几点：" target="_blank" rel="noopener">https://demo.github.io。注意以下几点：</a></p>
 <ul>
 <li>你的注册邮箱一定要验证</li>
 <li>username一定要是你的github用户名，也就是说一个github只能开一个博客</li>
 </ul>
-<h2 id="3-配置SSH-key"><a href="#3-配置SSH-key" class="headerlink" title="3 配置SSH key"></a>3 配置SSH key</h2><p>虽然使用用户名和密码也能访问GitHub权限，但不太安全，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
+<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><p>虽然使用用户名和密码也能访问GitHub权限，但不太安全，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
 <p>在Mac终端执行如下命令</p>
 <pre><code>$ cd ~/.ssh
 </code></pre><p>如果提示：No such file or directory 说明你是第一次使用ssh<br>继续执行如下命令</p>
@@ -337,9 +337,9 @@
 <p>测试是否配置成功</p>
 <pre><code>$ ssh -T git@github.com
 </code></pre><p>然后会看到Hi mushi007! You’ve successfully authenticated, but GitHub does not provide shell access.说明已经配置成功。</p>
-<h2 id="4-使用hexo写博客"><a href="#4-使用hexo写博客" class="headerlink" title="4 使用hexo写博客"></a>4 使用hexo写博客</h2><h3 id="4-1-关于hexo"><a href="#4-1-关于hexo" class="headerlink" title="4.1 关于hexo"></a>4.1 关于hexo</h3><p><a href="http://hexo.io" target="_blank" rel="noopener">官网</a>有详细介绍，这里不赘述</p>
-<h3 id="4-2-安装"><a href="#4-2-安装" class="headerlink" title="4.2 安装"></a>4.2 安装</h3><pre><code>$ npm install -g hexo
-</code></pre><h3 id="4-3-初始化"><a href="#4-3-初始化" class="headerlink" title="4.3 初始化"></a>4.3 初始化</h3><p>在电脑某个地方建一个文件夹，名字随便取，比如我的是blog，建在桌面</p>
+<h2 id="使用hexo写博客"><a href="#使用hexo写博客" class="headerlink" title="使用hexo写博客"></a>使用hexo写博客</h2><h3 id="关于hexo"><a href="#关于hexo" class="headerlink" title="关于hexo"></a>关于hexo</h3><p><a href="http://hexo.io" target="_blank" rel="noopener">官网</a>有详细介绍，这里不赘述</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>$ npm install -g hexo
+</code></pre><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在电脑某个地方建一个文件夹，名字随便取，比如我的是blog，建在桌面</p>
 <pre><code>$ cd desktop/blog
 $ hexo init    
 </code></pre><p>hexo会自动下载一些文件到这个目录，包括node_modules，目录结构如下图</p>
@@ -351,11 +351,11 @@ $ hexo s # 启动服务
 <p><img src="/images/20180902/public.png" alt="此处有图"></p>
 <p>hexo s是开启本地预览服务，打开浏览器访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可看到内容，默认的主题比较丑</p>
 <p><img src="/images/20180902/init.png" alt="此处有图"></p>
-<h3 id="4-4-修改主题"><a href="#4-4-修改主题" class="headerlink" title="4.4 修改主题"></a>4.4 修改主题</h3><p>因为默认主题比较丑，我们就修改一下，个人喜欢的主题是Next，首先下载这个主题</p>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>因为默认主题比较丑，我们就修改一下，个人喜欢的主题是Next，首先下载这个主题</p>
 <pre><code>$ cd desktop/blog
 $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 </code></pre><p>下载的主题都在themes目录下，修改全局_config.yml中的theme: landscape改为theme: next，然后重新执行hexo g来重新生成。如果出现一些莫名其妙的问题，可以先执行hexo clean来清理一下public的内容，然后再来重新生成和发布。</p>
-<h3 id="4-5-上传到github"><a href="#4-5-上传到github" class="headerlink" title="4.5 上传到github"></a>4.5 上传到github</h3><p>配置全局_config.yml中有关deploy的部分：</p>
+<h3 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h3><p>配置全局_config.yml中有关deploy的部分：</p>
 <pre><code>deploy:
     type: git
     repository: git@github.com:mushi007/mushi007.github.io.git
@@ -568,7 +568,7 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-准备工作"><span class="nav-number">1.</span> <span class="nav-text">1 准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建github仓库，用于存放博客"><span class="nav-number">2.</span> <span class="nav-text">2 创建github仓库，用于存放博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置SSH-key"><span class="nav-number">3.</span> <span class="nav-text">3 配置SSH key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-使用hexo写博客"><span class="nav-number">4.</span> <span class="nav-text">4 使用hexo写博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-关于hexo"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 关于hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-安装"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-初始化"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-修改主题"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-上传到github"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 上传到github</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建github仓库，用于存放博客"><span class="nav-number">2.</span> <span class="nav-text">创建github仓库，用于存放博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置SSH-key"><span class="nav-number">3.</span> <span class="nav-text">配置SSH key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用hexo写博客"><span class="nav-number">4.</span> <span class="nav-text">使用hexo写博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于hexo"><span class="nav-number">4.1.</span> <span class="nav-text">关于hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">4.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">4.3.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">4.4.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传到github"><span class="nav-number">4.5.</span> <span class="nav-text">上传到github</span></a></li></ol></li></ol></div>
             
 
           </div>
