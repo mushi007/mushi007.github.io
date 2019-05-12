@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JS," />
 
 
 
@@ -77,16 +77,18 @@
 
 
 
-<meta name="description" content="偶有所得，时时分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="葡萄君の博客">
-<meta property="og:url" content="http://yoursite.com/tags/Markdown/index.html">
+<meta name="description" content="记录一下疑惑">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么[0,1,5,10,15]使用sort()重排序后是[0,1,10,15,5]">
+<meta property="og:url" content="http://yoursite.com/2019/05/12/为什么-0-1-5-10-15-使用sort-重排序后是-0-1-10-15-5/index.html">
 <meta property="og:site_name" content="葡萄君の博客">
-<meta property="og:description" content="偶有所得，时时分享">
+<meta property="og:description" content="记录一下疑惑">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-12T11:51:26.721Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="葡萄君の博客">
-<meta name="twitter:description" content="偶有所得，时时分享">
+<meta name="twitter:title" content="为什么[0,1,5,10,15]使用sort()重排序后是[0,1,10,15,5]">
+<meta name="twitter:description" content="记录一下疑惑">
 
 
 
@@ -116,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Markdown/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/05/12/为什么-0-1-5-10-15-使用sort-重排序后是-0-1-10-15-5/"/>
 
 
 
 
 
-  <title>标签: Markdown | 葡萄君の博客</title>
+  <title>为什么[0,1,5,10,15]使用sort()重排序后是[0,1,10,15,5] | 葡萄君の博客</title>
   
 
 
@@ -141,7 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,54 +227,179 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Markdown<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/为什么-0-1-5-10-15-使用sort-重排序后是-0-1-10-15-5/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="葡萄君">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="葡萄君の博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/02/about-markdown/" itemprop="url">
-              
-                <span itemprop="name">Markdown学习笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">为什么[0,1,5,10,15]使用sort()重排序后是[0,1,10,15,5]</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-02T10:22:17+08:00"
-              content="2018-01-02" >
-          01-02
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-12T19:38:54+08:00">
+                2019-05-12
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>记录一下疑惑</p>
+<a id="more"></a>
+<h2 id="为什么-0-1-5-10-15-使用sort-重排序后是-0-1-10-15-5"><a href="#为什么-0-1-5-10-15-使用sort-重排序后是-0-1-10-15-5" class="headerlink" title="为什么[0,1,5,10,15]使用sort()重排序后是[0,1,10,15,5]"></a>为什么[0,1,5,10,15]使用sort()重排序后是[0,1,10,15,5]</h2><p>我们知道，sort()方法默认按升序排列数组项，即最小的值位于最前面，最大的值排在最后面。但是为了排序，sort()方法会调用每个数组项的toString()方法，然后比较得到的字符串，以确定如何排序。</p>
+<p>JS字符串在进行大小比较的时候，会根据第一个字符的ASCII码进行比较。因为5的ASCII码值大于1的ASCII码值，顾字符串比较时’5’&gt;’10’。这就解释了上面的问题。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>整理不易，感谢打赏！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/reward/wechatpay.jpg" alt="葡萄君 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/reward/alipay.jpg" alt="葡萄君 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/12/Mac上在iOS模拟器安装app/" rel="next" title="Mac上在iOS模拟器安装app">
+                <i class="fa fa-chevron-left"></i> Mac上在iOS模拟器安装app
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -280,6 +407,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -300,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -368,6 +508,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么-0-1-5-10-15-使用sort-重排序后是-0-1-10-15-5"><span class="nav-number">1.</span> <span class="nav-text">为什么[0,1,5,10,15]使用sort()重排序后是[0,1,10,15,5]</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -502,6 +658,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
