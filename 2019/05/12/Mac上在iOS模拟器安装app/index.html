@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="JS," />
+  <meta name="keywords" content="Mac指南," />
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="JavaScript中的parseInt与map函数都是常用的函数，可是 [“1”, “2”, “3”].map(parseInt)为何返回不是[1,2,3]却是[1,NaN,NaN]？">
-<meta name="keywords" content="JS">
+<meta name="description" content="本文分享如何在Mac上在iOS模拟器安装app">
+<meta name="keywords" content="Mac指南">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解惑 [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;].map(parseInt) 为何返回[1,NaN,NaN]">
-<meta property="og:url" content="http://yoursite.com/2018/02/11/map-and-parseint/index.html">
+<meta property="og:title" content="Mac上在iOS模拟器安装app">
+<meta property="og:url" content="http://yoursite.com/2019/05/12/Mac上在iOS模拟器安装app/index.html">
 <meta property="og:site_name" content="葡萄君の博客">
-<meta property="og:description" content="JavaScript中的parseInt与map函数都是常用的函数，可是 [“1”, “2”, “3”].map(parseInt)为何返回不是[1,2,3]却是[1,NaN,NaN]？">
+<meta property="og:description" content="本文分享如何在Mac上在iOS模拟器安装app">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-05T09:01:50.155Z">
+<meta property="og:updated_time" content="2019-05-12T10:07:34.183Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解惑 [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;].map(parseInt) 为何返回[1,NaN,NaN]">
-<meta name="twitter:description" content="JavaScript中的parseInt与map函数都是常用的函数，可是 [“1”, “2”, “3”].map(parseInt)为何返回不是[1,2,3]却是[1,NaN,NaN]？">
+<meta name="twitter:title" content="Mac上在iOS模拟器安装app">
+<meta name="twitter:description" content="本文分享如何在Mac上在iOS模拟器安装app">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/11/map-and-parseint/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/05/12/Mac上在iOS模拟器安装app/"/>
 
 
 
 
 
-  <title>解惑 ["1", "2", "3"].map(parseInt) 为何返回[1,NaN,NaN] | 葡萄君の博客</title>
+  <title>Mac上在iOS模拟器安装app | 葡萄君の博客</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/map-and-parseint/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/Mac上在iOS模拟器安装app/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="葡萄君">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">解惑 ["1", "2", "3"].map(parseInt) 为何返回[1,NaN,NaN]</h1>
+          <h1 class="post-title" itemprop="name headline">Mac上在iOS模拟器安装app</h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T21:23:53+08:00">
-                2018-02-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-12T17:58:14+08:00">
+                2019-05-12
               </time>
             
 
@@ -308,9 +308,17 @@
       
 
       
-        <p>JavaScript中的parseInt与map函数都是常用的函数，可是 [“1”, “2”, “3”].map(parseInt)为何返回不是[1,2,3]却是[1,NaN,NaN]？<br><a id="more"></a><br>由于parseInt(string, radix) 的参数radix必须介于2~36之间，而且字符串string中的数字不能大于radix才能正确返回数字结果值。<br>我们通过一下代码测试一下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>,<span class="string">"5"</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>];</span><br><span class="line">arr.map(<span class="built_in">parseInt</span>);</span><br></pre></td></tr></table></figure></p>
-<p>返回结果为：[1,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,9,11,13,15,17,19]<br>因为：<br>parseInt(‘1’,0) = 1,<br>parseInt(‘2’,1) = NaN,<br>parseInt(‘3’,2) = NaN,<br>……</p>
-<p>正是由于map的回调函数的参数index索引值作了parseInt的基数radix，导致出现超范围的radix赋值和不合法的进制解析，才会返回NaN。</p>
+        <p>本文分享如何在Mac上在iOS模拟器安装app</p>
+<a id="more"></a>
+<h2 id="Mac上在iOS模拟器安装app"><a href="#Mac上在iOS模拟器安装app" class="headerlink" title="Mac上在iOS模拟器安装app"></a>Mac上在iOS模拟器安装app</h2><h3 id="1、确保电脑安装了Xcode和Command-Line-Tools"><a href="#1、确保电脑安装了Xcode和Command-Line-Tools" class="headerlink" title="1、确保电脑安装了Xcode和Command Line Tools"></a>1、确保电脑安装了Xcode和Command Line Tools</h3><h3 id="2、启动模拟器"><a href="#2、启动模拟器" class="headerlink" title="2、启动模拟器"></a>2、启动模拟器</h3><h4 id="方式一、打开-Xcode，在-Xcode-菜单栏选择-Xcode-Open-Developer-Tool-Simulator-可以启动默认模拟器"><a href="#方式一、打开-Xcode，在-Xcode-菜单栏选择-Xcode-Open-Developer-Tool-Simulator-可以启动默认模拟器" class="headerlink" title="方式一、打开 Xcode，在 Xcode 菜单栏选择 Xcode - Open Developer Tool - Simulator 可以启动默认模拟器"></a>方式一、打开 Xcode，在 Xcode 菜单栏选择 Xcode - Open Developer Tool - Simulator 可以启动默认模拟器</h4><h4 id="方式二、"><a href="#方式二、" class="headerlink" title="方式二、"></a>方式二、</h4><ul>
+<li>使用 <strong>instruments -w device</strong> 命令查看电脑上所以模拟器型号，注意[]中的UDID，下一步会用到</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">iPhone 5s (12.1) [52C06F9E-1B73-496D-BE7E-D8CB64F6EC20] (Simulator)</span><br><span class="line">iPhone 6 (12.1) [F0DA548C-DBF8-4E8B-BF85-61614C874D6D] (Simulator)</span><br><span class="line">iPhone 6 Plus (12.1) [FB8DF790-3BEC-4468-8797-625377A7F6D2] (Simulator)</span><br><span class="line">iPhone 6s (12.1) [68A450CA-9736-49B5-8346-035CE09A9FE2] (Simulator)</span><br><span class="line">iPhone 6s Plus (12.1) [443E0C8A-964E-4FAD-BD02-5FB898A4282B] (Simulator)</span><br><span class="line">iPhone 7 (12.1) [2265B63F-976F-4C20-9C0A-1A56C2008842] (Simulator)</span><br><span class="line">iPhone 7 Plus (12.1) [EC76D34F-8A9E-4084-9CA8-AE3DBE32FC6B] (Simulator)</span><br><span class="line">iPhone 8 (12.1) [F245CE72-8D35-4BC8-B01C-E3EB6CE10832] (Simulator)</span><br><span class="line">iPhone 8 Plus (12.1) [650F5429-C2BE-4C54-8D87-AE12059E5441] (Simulator)</span><br><span class="line">iPhone SE (12.1) [22201DAB-BF7F-45CE-8EDF-4A733352D428] (Simulator)</span><br><span class="line">iPhone X (12.1) [4DE15E82-7A25-419F-90EB-926DB77A8AA8] (Simulator)</span><br><span class="line">iPhone XR (12.1) [86F6EFB6-E6C0-46BF-8C10-870241A81F9D] (Simulator)</span><br><span class="line">iPhone XS (12.1) [61C3E2E2-3889-4FF5-B1F1-F634168E1E72] (Simulator)</span><br><span class="line">iPhone XS (12.1) + Apple Watch Series 4 - 40mm (5.1) [2D4C2F9B-8F65-436B-8A29-2FB8D5415FEB] (Simulator)</span><br><span class="line">iPhone XS Max (12.1) [2A6EE5D9-ECFD-46CE-A07E-B5029EAEE2CA] (Simulator)</span><br><span class="line">iPhone XS Max (12.1) + Apple Watch Series 4 - 44mm (5.1) [7FB73A0E-DA5D-4C2A-82D4-16938632AAC6] (Simulator)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>根据UDID启动我们要打开的模拟器，比如iPhone XS，命令如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun instruments -w 61C3E2E2-3889-4FF5-B1F1-F634168E1E72</span><br></pre></td></tr></table></figure>
+<h4 id="将本地app包安装到打开的模拟器中"><a href="#将本地app包安装到打开的模拟器中" class="headerlink" title="将本地app包安装到打开的模拟器中"></a>将本地app包安装到打开的模拟器中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl install booted /Users/mushi/Documents/JD4iPhone.app</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -357,7 +365,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JS/" rel="tag"># JS</a>
+            <a href="/tags/Mac指南/" rel="tag"># Mac指南</a>
           
         </div>
       
@@ -370,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/02/about-markdown/" rel="next" title="Markdown学习笔记">
-                <i class="fa fa-chevron-left"></i> Markdown学习笔记
+              <a href="/2018/09/02/使用hexo+github搭建免费个人博客详细教程/" rel="next" title="使用hexo在github搭建免费个人博客教程">
+                <i class="fa fa-chevron-left"></i> 使用hexo在github搭建免费个人博客教程
               </a>
             
           </div>
@@ -379,10 +387,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/02/使用hexo+github搭建免费个人博客详细教程/" rel="prev" title="使用hexo在github搭建免费个人博客教程">
-                使用hexo在github搭建免费个人博客教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -434,8 +438,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -502,6 +515,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac上在iOS模拟器安装app"><span class="nav-number">1.</span> <span class="nav-text">Mac上在iOS模拟器安装app</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、确保电脑安装了Xcode和Command-Line-Tools"><span class="nav-number">1.1.</span> <span class="nav-text">1、确保电脑安装了Xcode和Command Line Tools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、启动模拟器"><span class="nav-number">1.2.</span> <span class="nav-text">2、启动模拟器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方式一、打开-Xcode，在-Xcode-菜单栏选择-Xcode-Open-Developer-Tool-Simulator-可以启动默认模拟器"><span class="nav-number">1.2.1.</span> <span class="nav-text">方式一、打开 Xcode，在 Xcode 菜单栏选择 Xcode - Open Developer Tool - Simulator 可以启动默认模拟器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方式二、"><span class="nav-number">1.2.2.</span> <span class="nav-text">方式二、</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将本地app包安装到打开的模拟器中"><span class="nav-number">1.2.3.</span> <span class="nav-text">将本地app包安装到打开的模拟器中</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
